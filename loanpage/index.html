@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BankDash - Loan</title>
+  <link rel="stylesheet" href="./dist/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9b249219f0.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+  <div class="headermenu">
+      <div class="headermenu__accountimage" aria-label="HeaderMenu Account image"></div>
+      <div class="headermenu__iconbell" aria-label="HeaderMenu Icon Bell">
+        <i class="fa-regular fa-bell"></i>
+      </div>
+      <div class="headermenu__iconmobliemenu" aria-label="HeaderMenu Icon Mobile Menu Bars">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="headermenu__icongear" aria-label="HeaderMenu Icon Gear">
+        <i class="fa-solid fa-gear"></i>
+      </div>
+    <div class="headermenu__search" aria-label="HeaderMenu Search">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search for something" />
+    </div>
+      <h2 class="headermenu__title">Loans</h2>
+    </div>
+  
+  <div class="sidebar" aria-label="Side Bar">
+    <img class="sidebar__image"  src="./images/header.png" alt="bankdash image">
+    <h2 class="sidebar__title">BankDash.</h2>
+    <ul>
+      <li><a href="#"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+      <li><a href="#"><i class="fa-solid fa-circle-dollar-to-slot"></i> Transactions</a></li>
+      <li><a href="#"><i class="fa-solid fa-user"></i> Accounts</a></li>
+      <li><a href="#"><i class="fa-solid fa-arrow-trend-up"></i> Investments</a></li>
+      <li><a href="#"><i class="fa-solid fa-credit-card"></i> Cards</a></li>
+      <li><a href="./index.html" class="selected"><i class="fa-solid fa-hand-holding-dollar"></i> Loans</a></li>
+      <li><a href="../servicespage/index.html"><i class="fa-solid fa-screwdriver-wrench"></i> Services</a></li>
+      <li><a href="#"><i class="fa-solid fa-lightbulb"></i>Privileges</a></li>
+      <li><a href="../settingspage/index.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+
+    </ul>
+  </div>
+
+  <div class="loans" aria-label="loans">
+    <div class="personal" aria-label="personal loans">
+      <div class="personal__icon" aria-label="personal icon">
+        <i class="fa-solid fa-user-tie"></i>
+      </div>
+      <h2 class="personal__title">Personal Loans</h2>
+      <p class="personal__amount">$50,000</p>
+    </div>
+    <div class="corporate" aria-label="corporate loans">
+      <div class="corporate__icon" aria-label=""corporate icon>
+        <i class="fa-solid fa-briefcase"></i>
+      </div>
+      <h2 class="corporate__title">Corporate Loans</h2>
+      <p class="corporate__amount">$100,000</p>
+    </div>
+    <div class="business" aria-label="business loans">
+      <div class="business__icon" aria-label="business icon">
+        <i class="fa-solid fa-chart-simple"></i>
+      </div>
+      <h2 class="business__title">Business Loans</h2>
+      <p class="business__amount">$500,000</p>
+    </div>
+    <div class="custom" aria-label="custom loans">
+      <div class="custom__icon"aria-label="custom icon">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+      </div>
+      <h2 class="custom__title">Custom Loans</h2>
+      <p class="custom__amount">Choose Money</p>
+    </div>
+  </div>
+
+  <div class="activeloans" aria-label="active loans">
+    <h2 class="activeloans__title">Active Loans Overview</h2>
+    <div class="activeloans__header" aria-label="activeloans header">
+      <ul>
+        <li><a href="#">SL No</a></li>
+        <li><a href="#">Loan Money</a></li>
+        <li><a href="#">Left to Repay</a></li>
+        <li><a href="#">Duration</a></li>
+        <li><a href="#">Interest Rate</a></li>
+        <li><a href="#">Installment</a></li>
+        <li><a href="#">Repay</a></li>
+      </ul>
+    </div>
+    <div class="activeloans__01" aria-label="activeloans list 1">
+      <ul>
+        <li><a href="#">01.</a></li>
+        <li><a href="#">$100,000</a></li>
+        <li><a href="#">$40,500</a></li>
+        <li><a href="#">8 Months</a></li>
+        <li><a href="#">12%</a></li>
+        <li><a href="#">$2,000 / month</a></li>
+        <li><button>Repay</button></li>
+      </ul>
+    </div>
+    <div class="activeloans__02" aria-label="activeloans list 2">
+      <ul>
+        <li><a href="#">02.</a></li>
+        <li><a href="#">$500,000</a></li>
+        <li><a href="#">$250,500</a></li>
+        <li><a href="#">36 Months</a></li>
+        <li><a href="#">10%</a></li>
+        <li><a href="#">$8,000 / month</a></li>
+        <li><button>Repay</button></li>
+      </ul>
+    </div>
+    <div class="activeloans__03" aria-label="activeloans list 3">
+      <ul>
+        <li><a href="#">03.</a></li>
+        <li><a href="#">$900,000</a></li>
+        <li><a href="#">$40,500</a></li>
+        <li><a href="#">12 Months</a></li>
+        <li><a href="#">12%</a></li>
+        <li><a href="#">$5,000 / month</a></li>
+        <li><button>Repay</button></li>
+      </ul>
+    </div>
+    <div class="activeloans__04" aria-label="activeloans list 4">
+      <ul>
+        <li><a href="#">04.</a></li>
+        <li><a href="#">$50,000</a></li>
+        <li><a href="#">$40,500</a></li>
+        <li><a href="#">25 Months</a></li>
+        <li><a href="#">5%</a></li>
+        <li><a href="#">$2,000 / month</a></li>
+        <li><button>Repay</button></li>
+      </ul>
+    </div>
+    <div class="activeloans__05" aria-label="activeloans list 5">
+      <ul>
+        <li><a href="#">05.</a></li>
+        <li><a href="#">$50,000</a></li>
+        <li><a href="#">$40,500</a></li>
+        <li><a href="#">5 Months</a></li>
+        <li><a href="#">16%</a></li>
+        <li><a href="#">$10,000 / month</a></li>
+        <li><button>Repay</button></li>
+      </ul>
+    </div>
+    <div class="activeloans__06" aria-label="activeloans list 6">
+      <ul>
+        <li><a href="#">06.</a></li>
+        <li><a href="#">$80,000</a></li>
+        <li><a href="#">$25,500</a></li>
+        <li><a href="#">14 Months</a></li>
+        <li><a href="#">8%</a></li>
+        <li><a href="#">$2,000 / month</a></li>
+        <li><button>Repay</button></li>
+      </ul>
+    </div>
+    <div class="activeloans__07" aria-label="activeloans list 7">
+      <ul>
+        <li><a href="#">07.</a></li>
+        <li><a href="#">$12,000</a></li>
+        <li><a href="#">$5,500</a></li>
+        <li><a href="#">9 Months</a></li>
+        <li><a href="#">13%</a></li>
+        <li><a href="#">$500 / month</a></li>
+        <li><button>Repay</button></li>
+      </ul>
+    </div>
+    <div class="activeloans__08" aria-label="activeloans list 8">
+      <ul>
+        <li><a href="#">08.</a></li>
+        <li><a href="#">$160,000</a></li>
+        <li><a href="#">$100,800</a></li>
+        <li><a href="#">3 Months</a></li>
+        <li><a href="#">12%</a></li>
+        <li><a href="#">$900 / month</a></li>
+        <li><button>Repay</button></li>
+      </ul>
+    </div>
+    <div class="activeloans__total" aria-label="activeloans total">
+      <ul>
+        <li><a href="#">Total</a></li>
+        <li><a href="#">$125,0000</a></li>
+        <li><a href="#">$750,000</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#">$50,000 / month</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- Active Loans For Mobile \ Breaking Point 375px -->
+  <div class="activeloansmobile" aria-label="activeloans mobile ">
+    <h2 class="activeloansmobile__title">Active Loans Overview</h2>
+    <div class="activeloansmobile__header" aria-label="activeloans mobile header">
+      <ul>
+        <li><a href="#">Loan Money</a></li>
+        <li><a href="#">Left to Repay</a></li>
+        <li><a href="#">Repay</a></li>
+      </ul>
+    </div>
+    <div class="activeloansmobile__01" aria-label="activeloans list 1">
+      <ul>
+        <li><a href="#">$100,000</a></li>
+        <li><a href="#">$40,500</a></li>
+        <li><button>Repay</button></li>
+      </ul>
+    </div>
+    <div class="activeloansmobile__02" aria-label="activeloans list 2">
+      <ul>
+        <li><a href="#">$500,000</a></li>
+        <li><a href="#">$250,500</a></li>
+        <li><button>Repay</button></li>
+      </ul>
+    </div>
+    <div class="activeloansmobile__03" aria-label="activeloans list 3">
+      <ul>
+        <li><a href="#">$900,000</a></li>
+        <li><a href="#">$40,500</a></li>
+        <li><button>Repay</button></li>
+      </ul>
+    </div>
+    <div class="activeloansmobile__04" aria-label="activeloans list 4">
+      <ul>
+        <li><a href="#">$50,000</a></li>
+        <li><a href="#">$40,500</a></li>
+        <li><button>Repay</button></li>
+      </ul>
+    </div>
+    <div class="activeloansmobile__05" aria-label="activeloans list 5">
+      <ul>
+        <li><a href="#">$50,000</a></li>
+        <li><a href="#">$40,500</a></li>
+        <li><button>Repay</button></li>
+      </ul>
+    </div>
+    <div class="activeloansmobile__06" aria-label="activeloans list 6">
+      <ul>
+        <li><a href="#">$80,000</a></li>
+        <li><a href="#">$25,500</a></li>
+        <li><button>Repay</button></li>
+      </ul>
+    </div>
+    <div class="activeloansmobile__07" aria-label="activeloans list 7">
+      <ul>
+        <li><a href="#">$12,000</a></li>
+        <li><a href="#">$5,500</a></li>
+        <li><button>Repay</button></li>
+      </ul>
+    </div>
+    <div class="activeloansmobile__08" aria-label="activeloans list 8">
+      <ul>
+        <li><a href="#">$160,000</a></li>
+        <li><a href="#">$100,800</a></li>
+        <li><button>Repay</button></li>
+      </ul>
+    </div>
+    <div class="activeloansmobile__total" aria-label="activeloans total">
+      <ul>
+        <li><a href="#">Total</a></li>
+        <li><a href="#">$125,0000</a></li>
+        <li><a href="#">$750,000</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

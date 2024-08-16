@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./dist/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9b249219f0.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div class="headermenu">
+    <div class="headermenu__accountimage" aria-label="HeaderMenu Account image"></div>
+    <div class="headermenu__iconbell" aria-label="HeaderMenu Icon Bell">
+      <i class="fa-regular fa-bell"></i>
+    </div>
+    <div class="headermenu__iconmobliemenu" aria-label="HeaderMenu Icon Mobile Menu Bars">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="headermenu__icongear" aria-label="HeaderMenu Icon Gear">
+      <i class="fa-solid fa-gear"></i>
+    </div>
+  <div class="headermenu__search" aria-label="HeaderMenu Search">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search for something" />
+  </div>
+    <h2 class="headermenu__title">Settings</h2>
+  </div>
+
+<div class="sidebar" aria-label="Side Bar">
+  <img class="sidebar__image"  src="./images/header.png" alt="bankdash image">
+  <h2 class="sidebar__title">BankDash.</h2>
+  <ul>
+    <li><a href="#"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+    <li><a href="#"><i class="fa-solid fa-circle-dollar-to-slot"></i> Transactions</a></li>
+    <li><a href="#"><i class="fa-solid fa-user"></i> Accounts</a></li>
+    <li><a href="#"><i class="fa-solid fa-arrow-trend-up"></i> Investments</a></li>
+    <li><a href="#"><i class="fa-solid fa-credit-card"></i> Cards</a></li>
+    <li><a href="../loanpage/index.html"><i class="fa-solid fa-hand-holding-dollar"></i> Loans</a></li>
+    <li><a href="../servicespage/index.html"><i class="fa-solid fa-screwdriver-wrench"></i> Services</a></li>
+    <li><a href="#"><i class="fa-solid fa-lightbulb"></i>Privileges</a></li>
+    <li><a href="./index.html" class="selected"><i class="fa-solid fa-gear"></i> Settings</a></li>
+
+  </ul>
+</div>
+ <div class="settingsbox">
+  <div class="settings">
+    <button>Save</button>
+    <div class="settings__header">
+      <ul>
+        <li><a href="" class="selected">Edit Profile</a></li>
+        <li><a href="">Preferences</a></li>
+        <li><a href="">Security</a></li>
+      </ul>
+    </div>
+    <div class="settings__profileimg"></div>
+    <div class="settings__profileicon">
+      <i class="fa-solid fa-pencil"></i>
+    </div>
+    <div class="settings__form">
+      <input type="text" placeholder="Charlene Reed">
+      <input type="text" class="fixleft" placeholder="Charlene Reed">
+      <input type="email" placeholder="charlenereed@gmail.com">
+      <input type="password" class="fixleft" placeholder="**********">
+      <input type="text" placeholder="25 January 1990"><i class="fa-solid fa-chevron-down"></i>
+      <input type="text" class="fixleft" placeholder="San Jose, California, USA">
+      <input type="text" placeholder="San Jose, California, USA">
+      <input type="text" class="fixleft" placeholder="San Jose">
+      <input type="text" placeholder="45962">
+      <input type="text" class="fixleft" placeholder="USA">
+    </div>
+    <div class="settings__labelform">
+      <h2>Your Name</h2>
+      <h2 class="fixleft">User Name</h2>
+      <h2>Email</h2>
+      <h2 class="fixleft">Password</h2>
+      <h2>Date of Birth</h2>
+      <h2 class="fixleft"> Present Address</h2>
+      <h2>Permanent Address</h2>
+      <h2 class="fixleft">City</h2>
+      <h2>Postal Code</h2>
+      <h2 class="fixleft">Country</h2>
+    </div>
+  </div>
+ </div>
+</body>
+</html>

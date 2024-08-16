@@ -1,0 +1,1116 @@
+body{
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  background-color:var(--background-color);
+  font-size: 16px;
+  overflow-x: hidden;
+// overflow-y: hidden;
+}
+
+:root {
+  --background-color: #ececec;
+  --white-color: #ffff;
+  --black-color: #232323;
+
+    /* Sidemenu Colors */
+  --sidemenu-color: #969595;
+  --sidemenutext-color: #343C6A;
+  --sidemenuhoverbuttons-color: #1814F3;
+
+  /* Headermenu Colors */
+  --headermenu-color: #F5F7FA;
+  --headermenu-searchcolor: #b0b7c3;
+  --headericons-bellcolor: #FE5C73;
+  --headericons-gearcolor: #718EBF;
+
+  /* Loans Colors */
+  --loanstext-color: #718EBF;
+  --loansamount-color: #232323;
+  --loanspersonalicon-color:#E7EDFF;
+  --loanspersonalicon-color2:#396AFF;
+  --loancorporateicon-color: #FFF5D9;
+  --loancorporateicon-color2:#FFBB38;
+  --loanbusiness-color:#FFE0EB;
+  --loanbusiness-color2:#FF82AC;
+  --loancustom-color:#DCFAF8;
+  --loancustom-color2:#16DBCC;
+
+  /* Active Loans Colors */
+  --activeloantotal-color: #FE5C73;
+  --activeloansbuttons-color: #1814F3;
+  --activeloansheaderlistext-color: #718EBF;
+  --activeloansheadertext-color: #333B69;
+  --activeloansamount-color: #232323;
+}
+
+
+.headermenu{
+  height: 8.24vh;
+  width: 100vw;
+  background-color: var(--white-color);
+  position: absolute;
+  @media (max-width: 1440px) {
+    height: 10.24vh;
+}
+@media (max-width: 375px) {
+  height: 20.24vh;
+  width: 117%;
+}
+  &__search {
+    display: flex;
+    align-items: center;
+    background-color: var(--headermenu-color);
+    border-radius: 2.7vh;
+    padding: 1.2vh 1.7vh;
+    width: 12vw;
+    position: relative;
+    top: 26%;
+    left: 68%;
+    @media (max-width: 1024px) {
+      left: 52%;
+      width: 24vw;
+    }
+    @media (max-width: 375px) {
+      top: 61%;
+      left: 10%;
+      width: 75%;
+      padding: 1.7vh 2.1vh;
+    }
+    i {
+      color: var(--headermenu-searchcolor);
+      margin-right: 1.2vh;
+    }
+  
+    input {
+      border: none;
+      background-color: transparent;
+      outline: none;
+      color: var(--headermenu-searchcolor);
+      font-size: 1rem;
+      flex-grow: 1;
+  
+      &::placeholder {
+        color: var(--headermenu-searchcolor);
+      }
+    }
+  }
+&__accountimage {
+  background-image: url(../images/accountimg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 95%;
+  top: 16%;
+  height: 5.2vh;
+  width: 2.5vw;
+  border-radius: 50%; 
+  @media (max-width: 1024px) {
+    height: 6.2vh;
+    width: 4.6vw;
+    left: 93%;
+  }
+  @media (max-width: 375px) {
+    height: 7.2vh;
+    width: 15.6vw;
+    left: 85%;
+  }
+}
+
+&__iconbell{
+  position: absolute;
+  left: 91%;
+  background-color: var(--headermenu-color);
+  top: 25%;
+  height: 4.2vh;
+  width: 2vw;
+  border-radius: 50%; 
+  @media (max-width: 1024px) {
+    left: 85%;
+  }
+  @media (max-width: 375px) {
+    display: none;
+  }
+
+  i{
+    color: var(--headericons-bellcolor);
+    font-size: 1.3rem;
+    position: relative;
+    left: 25%;
+    top: 25%;
+  }
+}
+&__icongear{
+  position: absolute;
+  left: 88%;
+  background-color: var(--headermenu-color);
+  top: 25%;
+  height: 4.2vh;
+  width: 2vw;
+  border-radius: 50%; 
+  @media (max-width: 1024px) {
+    left: 80%;
+  }
+  @media (max-width: 375px) {
+    display: none;
+  }
+  i{
+    color: var(--headericons-gearcolor);
+    font-size: 1.3rem;
+    position: relative;
+    left: 25%;
+    top: 25%;
+  }
+}
+&__iconmobliemenu{
+  position: absolute;
+  left: 6%;
+  top: 28%;
+  font-size: 1.3rem;
+  display: none;
+  @media (max-width: 375px) {
+    font-size: 1.3rem;
+    display: block;
+  }
+
+  i{
+    color: var(--black-color);
+    font-size: 1.3rem;
+  }
+}
+  &__title{
+    color: var(--sidemenutext-color);
+    left: 15%;
+    top: 2%;
+    position: absolute;
+    font-size: 1.8rem;
+    font-weight: 600;
+    @media (max-width: 1024px) {
+      left: 22%;
+    }
+    @media (max-width: 375px) {
+      left: 40%;
+      top: 8%;
+    }
+  }
+}
+
+.sidebar{
+  width: 13.2vw;
+  height: 100vh;
+  background-color: var(--white-color);
+  @media (max-width: 375px) {
+    display: none;
+  }
+  ul{
+    li{
+      list-style: none;
+      padding: 0.6vh;
+      margin: 2.6vh;
+      left: -7.5%;
+      position: relative;
+      top: 4.1vh;
+      @media (max-width: 1440px) {
+        margin: 2.5vh;
+        left: -15.5%;
+        top: 7.1vh;
+    }
+      a{
+        @media (max-width: 1440px) {
+          font-size: 0.84rem;
+      }
+        font-weight: 500;
+        font-size: 1rem;
+        color: var(--sidemenu-color);
+        text-decoration: none;
+        transition: 0.4s ease;
+        @media (max-width: 1024px) {
+          position: relative;
+          left: -2vh;
+        }
+        &:hover{
+          color: var(--sidemenuhoverbuttons-color);
+        }
+      }
+    }
+  }
+  .selected{
+    color: #1814F3;
+  }
+  .fa-solid{
+    position: relative;
+    left: -2vh;
+    @media (max-width: 1024px) {
+      left: -3vh;
+      top: 2.5vh;
+    }
+  }
+  &__title{
+    @media (max-width: 1440px) {
+      left: 3.7%;
+      top: 1.4%;
+      font-size: 1.4rem;
+
+  }
+    color: var(--sidemenutext-color);
+    position: absolute;
+    left: 4.4%;
+    top: 1.4%;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 1.6rem;
+    font-weight: 900;
+    @media (max-width: 1024px) {
+      font-size: 1.1rem;
+    }
+  }
+  &__image{
+    @media (max-width: 1440px) {
+      top: 2.8%;
+      left: 8%;
+  }
+    width: 2.2vw;
+    position: relative;
+    top: 3%;
+    left: 12%;
+  }
+  
+}
+
+.loans{
+  .personal{
+    background-color: var(--white-color);
+    height: 120px;
+    width: 255px;
+    border-radius: 25px;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    @media (max-width: 1440px) {
+      top: 14%;
+      left: 15.6%;
+
+  }
+  @media (max-width: 1024px) {
+    width: 205px;
+}
+@media (max-width: 375px) {
+  top: 24%;
+  left: 3%;
+}
+    &:hover{
+      animation: moveUp 0.3s ease forwards;
+    }
+    &__icon{
+      position: absolute;
+      left: 6%;
+      background-color: var(--loanspersonalicon-color);
+      top: 20%;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%; 
+      @media (max-width: 1024px) {
+        height: 50px;
+        width: 50px;
+        top: 28%;
+    }
+      i{
+        color: var(--loanspersonalicon-color2);
+        font-size: 30px;
+        position: relative;
+        left: 30%;
+        top: 30%;
+        @media (max-width: 1024px) {
+          font-size: 25px;
+      }
+      }
+    }
+    &__title{
+      color: var(--loanstext-color);
+      font-weight: 400;
+      font-size: 16px;
+      left: 40%;
+      top: 18%;
+      position: absolute;
+    }
+    &__amount{
+      color: var(--loansamount-color);
+      font-weight: 600;
+      position: absolute;
+      top: 35%;
+      font-size: 20px;
+      left: 39%;
+    }
+  }
+  .corporate{
+    background-color: var(--white-color);
+    height: 120px;
+    width: 255px;
+    border-radius: 25px;
+    position: absolute;
+    top: 15%;
+    left: 46%;
+    @media (max-width: 1440px) {
+      top: 14%;
+      left: 35.6%;
+
+  }
+    &:hover{
+      animation: moveUp 0.3s ease forwards;
+    }
+    @media (max-width: 1024px) {
+      width: 205px;
+      left: 36.5%;
+  }
+  @media (max-width: 375px) {
+    top: 24%;
+    left: 60%;
+  }
+    &__icon{
+      position: absolute;
+      left: 6%;
+      background-color: var(--loancorporateicon-color);
+      top: 20%;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%; 
+      @media (max-width: 1024px) {
+        height: 50px;
+        width: 50px;
+        top: 28%;
+    }
+      i{
+        color: var(--loancorporateicon-color2);
+        font-size: 29px;
+        position: relative;
+        left: 28%;
+        top: 28%;
+        @media (max-width: 1024px) {
+          font-size: 24px;
+      }
+      }
+    }
+    &__title{
+      color: var(--loanstext-color);
+      font-weight: 400;
+      font-size: 16px;
+      left: 40%;
+      top: 18%;
+      position: absolute;
+      @media (max-width: 1024px) {
+        font-size: 15px;
+      }
+    }
+    &__amount{
+      color: var(--loansamount-color);
+      font-weight: 600;
+      position: absolute;
+      top: 35%;
+      font-size: 20px;
+      left: 39%;
+    }
+  }
+  .business{
+    background-color: var(--white-color);
+    height: 120px;
+    width: 255px;
+    border-radius: 25px;
+    position: absolute;
+    top: 15%;
+    left: 62%;
+    @media (max-width: 1440px) {
+      top: 14%;
+      left: 55.6%;
+
+  }
+  @media (max-width: 375px) {
+    display: none;
+  }
+    &:hover{
+      animation: moveUp 0.3s ease forwards;
+    }
+    @media (max-width: 1024px) {
+      width: 205px;
+      left: 57.5%;
+  }
+    &__icon{
+      position: absolute;
+      left: 6%;
+      background-color: var(--loanbusiness-color);
+      top: 20%;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%; 
+      @media (max-width: 1024px) {
+        height: 50px;
+        width: 50px;
+        top: 28%;
+    }
+      i{
+        color: var(--loanbusiness-color2);
+        font-size: 30px;
+        position: relative;
+        left: 30%;
+        top: 30%;
+        @media (max-width: 1024px) {
+          font-size: 26px;
+      }
+      }
+    }
+    &__title{
+      color: var(--loanstext-color);
+      font-weight: 400;
+      font-size: 16px;
+      left: 40%;
+      top: 18%;
+      position: absolute;
+    }
+    &__amount{
+      color: var(--loansamount-color);
+      font-weight: 600;
+      position: absolute;
+      top: 35%;
+      font-size: 20px;
+      left: 39%;
+    }
+  }
+  .custom{
+    background-color: var(--white-color);
+    height: 120px;
+    width: 255px;
+    border-radius: 25px;
+    position: absolute;
+    top: 15%;
+    left:78%;
+    @media (max-width: 1440px) {
+      top: 14%;
+      left: 75.6%;
+  }
+    &:hover{
+      animation: moveUp 0.3s ease forwards;
+    }
+    @media (max-width: 1024px) {
+      width: 205px;
+      left: 78.8%;
+  }
+  @media (max-width: 375px) {
+    display: none;
+  }
+    &__icon{
+      position: absolute;
+      left: 6%;
+      background-color: var(--loancustom-color);
+      top: 20%;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%; 
+      @media (max-width: 1024px) {
+        height: 50px;
+        width: 50px;
+        top: 28%;
+    }
+      i{
+        color: var(--loancustom-color2);
+        font-size: 30px;
+        position: relative;
+        left: 30%;
+        top: 30%;
+        @media (max-width: 1024px) {
+          font-size: 25px;
+      }
+      }
+    }
+    &__title{
+      color: var(--loanstext-color);
+      font-weight: 400;
+      font-size: 16px;
+      left: 40%;
+      top: 18%;
+      position: absolute;
+    }
+    &__amount{
+      color: var(--loansamount-color);
+      font-weight: 600;
+      position: absolute;
+      top: 35%;
+      font-size: 19px;
+      left: 39%;
+      @media (max-width: 1024px) {
+        font-size: 17px;
+        left: 35%;
+      }
+    }
+  }
+  @keyframes moveUp {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+}
+
+.activeloans{
+  background-color: var(--white-color);
+  width: 1180px;
+  height: 550px;
+  border-radius: 25px;
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  @media (max-width: 375px) {
+    display: none;
+  }
+  @media (max-width: 1440px) {
+    top: 35%;
+    left: 15%;
+}
+@media (max-width: 1024px) {
+  width: 870px;
+  height: 480px;
+
+}
+  &__title{
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--activeloansheadertext-color);
+    position: absolute;
+    top: -10%;
+    left: -1%;
+  }
+
+  button{
+    border-radius: 50px;
+    padding: 7px 20px;
+    background-color: transparent;
+    border: 1px solid var(--activeloansbuttons-color);
+    color: var(--activeloansbuttons-color);
+    position: relative;
+    top: -15vh;
+    left: 1220%;
+    @media (max-width: 1440px) {
+      top: -17.1vh;
+  }
+  @media (max-width: 1024px) {
+    top: -11vh;
+    left: 910%;
+
+}
+  }
+  &__header{
+    ul{
+      li{
+        @media (max-width: 1440px) {
+          top: -5vh;
+      }
+        position: relative;
+        top: -4vh;
+        left: -3%;
+        display: inline-block;
+        margin: 12px;
+        padding: 29px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloansheaderlistext-color);
+          text-decoration: none;
+        }
+        @media (max-width: 1024px) {
+          margin: 7px;
+          top: -3vh;
+          padding: 12.5px;
+      }
+      }
+    }
+  }
+  &__01{
+    ul{
+      li{
+        @media (max-width: 1440px) {
+          top: -17vh;
+      }
+        position: relative;
+        top: -14vh;
+        left: -3%;
+        display: inline-block;
+        margin: 34px;
+        padding: 20px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloansamount-color);
+          text-decoration: none;
+        }
+        @media (max-width: 1024px) {
+          margin: 20px;
+          top: -9vh;
+          padding: 9px;
+      }
+      }
+    }
+  }
+  &__02{
+    ul{
+      li{
+        @media (max-width: 1440px) {
+          top: -45.5vh;
+      }
+        position: relative;
+        top: -38.5vh;
+        left: -3%;
+        display: inline-block;
+        margin: 34px;
+        padding: 17.8px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloansamount-color);
+          text-decoration: none;
+        }
+        @media (max-width: 1024px) {
+          margin: 17.8px;
+          top: -26vh;
+          padding: 9px;
+      }
+      }
+    }
+    button{
+      color: var(--black-color);
+      border: 1px solid var(--black-color);
+    }
+  }
+  &__03{
+    ul{
+      li{
+        @media (max-width: 1440px) {
+          top: -74.5vh;
+      }
+        position: relative;
+        top: -63vh;
+        left: -3%;
+        display: inline-block;
+        margin: 34px;
+        padding: 19.1px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloansamount-color);
+          text-decoration: none;
+        }
+        @media (max-width: 1024px) {
+          margin: 19px;
+          top: -42vh;
+          padding: 9px;
+      }
+      }
+    }
+    button{
+      color: var(--black-color);
+      border: 1px solid var(--black-color);
+    }
+  }
+  &__04{
+    ul{
+      li{
+        @media (max-width: 1440px) {
+          top: -103.5vh;
+      }
+        position: relative;
+        top: -88vh;
+        left: -3%;
+        display: inline-block;
+        margin: 34px;
+        padding: 20.5px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloansamount-color);
+          text-decoration: none;
+        }
+        @media (max-width: 1024px) {
+          margin: 20px;
+          top: -59vh;
+          padding: 9px;
+      }
+      }
+    }
+    button{
+      color: var(--black-color);
+      border: 1px solid var(--black-color);
+    }
+  }
+  &__05{
+    ul{
+      li{
+        @media (max-width: 1440px) {
+          top: -132.5vh;
+      }
+        position: relative;
+        top: -113vh;
+        left: -3%;
+        display: inline-block;
+        margin: 34px;
+        padding: 20.8px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloansamount-color);
+          text-decoration: none;
+        }
+        @media (max-width: 1024px) {
+          margin: 20.6px;
+          top: -76vh;
+          padding: 9px;
+      }
+      }
+    }
+    button{
+      color: var(--black-color);
+      border: 1px solid var(--black-color);
+      @media (max-width: 1024px) {
+        left: 910%;
+    
+    }
+    }
+  }
+  &__06{
+    ul{
+      li{
+        @media (max-width: 1440px) {
+          top: -161.5vh;
+      }
+        position: relative;
+        top: -138vh;
+        left: -3%;
+        display: inline-block;
+        margin: 34px;
+        padding: 20.8px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloansamount-color);
+          text-decoration: none;
+        }
+        @media (max-width: 1024px) {
+          margin: 20px;
+          padding: 9px;
+          top: -94vh;
+      }
+      }
+    }
+    button{
+      color: var(--black-color);
+      border: 1px solid var(--black-color);
+    }
+  }
+  &__07{
+    ul{
+      li{
+        @media (max-width: 1440px) {
+          top: -191.5vh;
+      }
+        position: relative;
+        top: -163vh;
+        left: -3%;
+        display: inline-block;
+        margin: 34px;
+        padding: 22.8px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloansamount-color);
+          text-decoration: none;
+        }
+        @media (max-width: 1024px) {
+          margin: 22.2px;
+          padding: 9px;
+          top: -112vh;
+
+      }
+      }
+    }
+    button{
+      color: var(--black-color);
+      border: 1px solid var(--black-color);
+    }
+  }
+  &__08{
+    ul{
+      li{
+        @media (max-width: 1440px) {
+          top: -220.5vh;
+      }
+        position: relative;
+        top: -188vh;
+        left: -3%;
+        display: inline-block;
+        margin: 34px;
+        padding: 20px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloansamount-color);
+          text-decoration: none;
+        }
+        @media (max-width: 1024px) {
+          margin: 20px;
+          padding: 9px;
+          top: -131vh;
+
+      }
+      }
+    }
+    button{
+      color: var(--black-color);
+      border: 1px solid var(--black-color);
+    }
+  }
+  &__total{
+    ul{
+      li{
+        @media (max-width: 1440px) {
+          top: -254.5vh;
+      }
+        position: relative;
+        top: -218vh;
+        left: -2.5%;
+        display: inline-block;
+        margin: 25px;
+        padding: 18.4px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloantotal-color);
+          text-decoration: none;
+        }
+        @media (max-width: 1024px) {
+          margin: 25px;
+          padding: 1px;
+          top: -150vh;
+          left: -3%;
+
+      }
+      }
+    }
+  }
+}
+
+
+// <!-- Active Loans For Mobile \ Breaking Point 375px -->
+.activeloansmobile{
+  background-color: var(--white-color);
+  width: 440px;
+  height: 550px;
+  border-radius: 25px;
+  position: absolute;
+  top: 45%;
+  left: 0%;
+  display: none;
+  @media (max-width: 375px) {
+    display: block;
+  }
+  &__title{
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--activeloansheadertext-color);
+    position: absolute;
+    top: -10%;
+    left: 5%;
+  }
+
+  button{
+    border-radius: 50px;
+    padding: 7px 20px;
+    background-color: transparent;
+    border: 1px solid var(--activeloansbuttons-color);
+    color: var(--activeloansbuttons-color);
+    position: relative;
+    top: -12vh;
+    left: 340%;
+  }
+  &__header{
+    ul{
+      li{
+        position: relative;
+        top: -4vh;
+        left: -3%;
+        display: inline-block;
+        margin: 10px;
+        padding: 14px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloansheaderlistext-color);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__01{
+    ul{
+      li{
+        position: relative;
+        top: -11vh;
+        left: -3%;
+        display: inline-block;
+        margin: 15px;
+        padding: 20px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloansamount-color);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__02{
+    ul{
+      li{
+        position: relative;
+        top: -31.5vh;
+        left: -3%;
+        display: inline-block;
+        margin: 15px;
+        padding: 20px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloansamount-color);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__03{
+    ul{
+      li{
+        position: relative;
+        top: -52vh;
+        left: -3%;
+        display: inline-block;
+        margin: 15px;
+        padding: 20px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloansamount-color);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__04{
+    ul{
+      li{
+        position: relative;
+        top: -72vh;
+        left: -3%;
+        display: inline-block;
+        margin: 15px;
+        padding: 20px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloansamount-color);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__05{
+    ul{
+      li{
+        position: relative;
+        top: -92vh;
+        left: -3%;
+        display: inline-block;
+        margin: 15px;
+        padding: 20px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloansamount-color);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__06{
+    ul{
+      li{
+        position: relative;
+        top: -112vh;
+        left: -3%;
+        display: inline-block;
+        margin: 15px;
+        padding: 20px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloansamount-color);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__07{
+    ul{
+      li{
+        position: relative;
+        top: -131vh;
+        left: -3%;
+        display: inline-block;
+        margin: 15px;
+        padding: 20px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloansamount-color);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__08{
+    ul{
+      li{
+        position: relative;
+        top: -150vh;
+        left: -3%;
+        display: inline-block;
+        margin: 15px;
+        padding: 20px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloansamount-color);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__total{
+    ul{
+      li{
+        position: relative;
+        top: -168vh;
+        left: -2.5%;
+        display: inline-block;
+        margin: 10px;
+        padding: 18.4px;
+        list-style: none;
+        a{
+          font-weight: 500;
+          color: var(--activeloantotal-color);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+

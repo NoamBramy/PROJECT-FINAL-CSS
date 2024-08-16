@@ -1,0 +1,1513 @@
+body{
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  background-color:var(--background-color);
+  font-size: 16px;
+  overflow-x: hidden;
+overflow-y: hidden;
+}
+
+:root {
+  --background-color: #ececec;
+  --white-color: #ffff;
+  --black-color: #232323;
+
+    /* Sidemenu Colors */
+  --sidemenu-color: #969595;
+  --sidemenutext-color: #343C6A;
+  --sidemenuhoverbuttons-color: #1814F3;
+
+  /* Headermenu Colors */
+  --headermenu-color: #F5F7FA;
+  --headermenu-searchcolor: #b0b7c3;
+  --headericons-bellcolor: #FE5C73;
+  --headericons-gearcolor: #718EBF;
+
+  /* services Colors */
+  --servicestext-color: #718EBF;
+  --servicesamount-color: #232323;
+  --serviceslifeInsuranceicon-color:#E7EDFF;
+  --serviceslifeInsuranceicon-color2:#396AFF;
+  --serviceshoppingicon-color: #FFF5D9;
+  --serviceshoppingicon-color2:#FFBB38;
+  --servicesafety-color:#DCFAF8;
+  --servicesafety-color2:#16DBCC;
+}
+
+.headermenu{
+  height: 8.24vh;
+  width: 100vw;
+  background-color: var(--white-color);
+  position: absolute;
+  @media (max-width: 1440px) {
+    height: 10.24vh;
+}
+@media (max-width: 375px) {
+  height: 20.24vh;
+  width: 100%;
+}
+  &__search {
+    display: flex;
+    align-items: center;
+    background-color: var(--headermenu-color);
+    border-radius: 2.7vh;
+    padding: 1.2vh 1.7vh;
+    width: 12vw;
+    position: relative;
+    top: 26%;
+    left: 68%;
+    @media (max-width: 1024px) {
+      left: 52%;
+      width: 24vw;
+    }
+    @media (max-width: 375px) {
+      top: 61%;
+      left: 10%;
+      width: 75%;
+      padding: 1.7vh 2.1vh;
+    }
+    i {
+      color: var(--headermenu-searchcolor);
+      margin-right: 1.2vh;
+    }
+  
+    input {
+      border: none;
+      background-color: transparent;
+      outline: none;
+      color: var(--headermenu-searchcolor);
+      font-size: 1rem;
+      flex-grow: 1;
+  
+      &::placeholder {
+        color: var(--headermenu-searchcolor);
+      }
+    }
+  }
+&__accountimage {
+  background-image: url(../images/accountimg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 95%;
+  top: 16%;
+  height: 5.2vh;
+  width: 2.5vw;
+  border-radius: 50%; 
+  @media (max-width: 1024px) {
+    height: 6.2vh;
+    width: 4.6vw;
+    left: 93%;
+  }
+  @media (max-width: 375px) {
+    height: 7.2vh;
+    width: 15.6vw;
+    left: 83%;
+  }
+}
+
+&__iconbell{
+  position: absolute;
+  left: 91%;
+  background-color: var(--headermenu-color);
+  top: 25%;
+  height: 4.2vh;
+  width: 2vw;
+  border-radius: 50%; 
+  @media (max-width: 1024px) {
+    left: 85%;
+  }
+  @media (max-width: 375px) {
+    display: none;
+  }
+
+  i{
+    color: var(--headericons-bellcolor);
+    font-size: 1.3rem;
+    position: relative;
+    left: 25%;
+    top: 25%;
+  }
+}
+&__icongear{
+  position: absolute;
+  left: 88%;
+  background-color: var(--headermenu-color);
+  top: 25%;
+  height: 4.2vh;
+  width: 2vw;
+  border-radius: 50%; 
+  @media (max-width: 1024px) {
+    left: 80%;
+  }
+  @media (max-width: 375px) {
+    display: none;
+  }
+  i{
+    color: var(--headericons-gearcolor);
+    font-size: 1.3rem;
+    position: relative;
+    left: 25%;
+    top: 25%;
+  }
+}
+&__iconmobliemenu{
+  position: absolute;
+  left: 6%;
+  top: 28%;
+  font-size: 1.3rem;
+  display: none;
+  @media (max-width: 375px) {
+    font-size: 1.3rem;
+    display: block;
+  }
+
+  i{
+    color: var(--black-color);
+    font-size: 1.3rem;
+  }
+}
+  &__title{
+    color: var(--sidemenutext-color);
+    left: 15%;
+    top: 2%;
+    position: absolute;
+    font-size: 1.8rem;
+    font-weight: 600;
+    @media (max-width: 1024px) {
+      left: 22%;
+    }
+    @media (max-width: 375px) {
+      left: 40%;
+      top: 8%;
+    }
+  }
+}
+
+.sidebar{
+  width: 13.2vw;
+  height: 100vh;
+  background-color: var(--white-color);
+  @media (max-width: 375px) {
+    display: none;
+  }
+  ul{
+    li{
+      list-style: none;
+      padding: 0.6vh;
+      margin: 2.6vh;
+      left: -7.5%;
+      position: relative;
+      top: 4.1vh;
+      @media (max-width: 1440px) {
+        margin: 2.5vh;
+        left: -15.5%;
+        top: 7.1vh;
+    }
+      a{
+        @media (max-width: 1440px) {
+          font-size: 0.84rem;
+      }
+        font-weight: 500;
+        font-size: 1rem;
+        color: var(--sidemenu-color);
+        text-decoration: none;
+        transition: 0.4s ease;
+        @media (max-width: 1024px) {
+          position: relative;
+          left: -2vh;
+        }
+        &:hover{
+          color: var(--sidemenuhoverbuttons-color);
+        }
+      }
+    }
+  }
+  .selected{
+    color: #1814F3;
+  }
+  .fa-solid{
+    position: relative;
+    left: -2vh;
+    @media (max-width: 1024px) {
+      left: -3vh;
+      top: 2.5vh;
+    }
+  }
+  &__title{
+    @media (max-width: 1440px) {
+      left: 3.7%;
+      top: 1.4%;
+      font-size: 1.4rem;
+
+  }
+    color: var(--sidemenutext-color);
+    position: absolute;
+    left: 4.4%;
+    top: 1.4%;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 1.6rem;
+    font-weight: 900;
+    @media (max-width: 1024px) {
+      font-size: 1.1rem;
+    }
+  }
+  &__image{
+    @media (max-width: 1440px) {
+      top: 2.8%;
+      left: 8%;
+  }
+    width: 2.2vw;
+    position: relative;
+    top: 3%;
+    left: 12%;
+  }
+  
+}
+
+.services{
+  .lifeInsurance{
+    background-color: var(--white-color);
+    height: 120px;
+    width: 350px;
+    border-radius: 25px;
+    position: absolute;
+    top: 12%;
+    left: 25%;
+    @media (max-width: 1440px) {
+      left: 15%;
+  }
+  @media (max-width: 1024px) {
+    width: 255px;
+}
+@media (max-width: 375px) {
+  top: 22%;
+  left: 2%;
+  width: 260px;
+}
+    &:hover{
+      animation: moveUp 0.3s ease forwards;
+    }
+    &__icon{
+      position: absolute;
+      left: 14%;
+      background-color: var(--serviceslifeInsuranceicon-color);
+      top: 20%;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%; 
+      @media (max-width: 1024px) {
+        height: 60px;
+        width: 60px;
+        top: 25%;
+        left: 8%;
+    }
+      i{
+        color: var(--serviceslifeInsuranceicon-color2);
+        font-size: 30px;
+        position: relative;
+        left: 30%;
+        top: 30%;
+      }
+    }
+    &__title{
+      color: var(--servicesamount-color);
+      font-weight: bold;
+      font-size: 20px;
+      left: 40%;
+      top: 15%;
+      position: absolute;
+      @media (max-width: 1024px) {
+        font-size: 20px;
+        left: 36%;
+    }
+    }
+    &__amount{
+      color: var(--servicestext-color);
+      font-weight: 600;
+      position: absolute;
+      top: 42%;
+      font-size: 16px;
+      left: 40%;
+      @media (max-width: 1024px) {
+        font-size: 16px;
+        left: 35.5%;
+    }
+    }
+  }
+  .shopping{
+    background-color: var(--white-color);
+    height: 120px;
+    width: 350px;
+    border-radius: 25px;
+    position: absolute;
+    top: 12%;
+    left: 47%;
+    @media (max-width: 1440px) {
+      left: 43%;
+  }
+  @media (max-width: 1024px) {
+    width: 255px;
+}
+@media (max-width: 375px) {
+  top: 22%;
+  width: 103px;
+  left: 73%;
+}
+    &:hover{
+      animation: moveUp 0.3s ease forwards;
+    }
+    &__icon{
+      position: absolute;
+      left: 14%;
+      background-color: var(--serviceshoppingicon-color);
+      top: 20%;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%; 
+      @media (max-width: 1024px) {
+        height: 60px;
+        width: 60px;
+        top: 25%;
+        left: 8%;
+    }
+    @media (max-width: 375px) {
+      left: 25%;
+    }
+      i{
+        color: var(--serviceshoppingicon-color2);
+        font-size: 29px;
+        position: relative;
+        left: 32%;
+        top: 28%;
+        @media (max-width: 1024px) {
+          font-size: 29px;
+      }
+      }
+    }
+    &__title{
+      color: var(--servicesamount-color);
+      font-weight: bold;
+      font-size: 20px;
+      left: 38.6%;
+      top: 15%;
+      position: absolute;
+      @media (max-width: 1024px) {
+        font-size: 20px;
+        left: 38%;
+    }
+    @media (max-width: 375px) {
+      display: none;
+    }
+    }
+    &__amount{
+      color: var(--servicestext-color);
+      font-weight: 600;
+      position: absolute;
+      top: 40%;
+      font-size: 16px;
+      left: 39%;
+      @media (max-width: 1024px) {
+        font-size: 16px;
+        left: 38%;
+    }
+    @media (max-width: 375px) {
+      display: none;
+    }
+    }
+  }
+  .safety{
+    background-color: var(--white-color);
+    height: 120px;
+    width: 350px;
+    border-radius: 25px;
+    position: absolute;
+    top: 12%;
+    left: 70%;
+    @media (max-width: 1024px) {
+      width: 255px;
+      left: 73%;
+  }
+  @media (max-width: 375px) {
+    display: none;
+  }
+    &:hover{
+      animation: moveUp 0.3s ease forwards;
+    }
+    &__icon{
+      position: absolute;
+      left: 12%;
+      background-color: var(--servicesafety-color);
+      top: 20%;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%; 
+      @media (max-width: 1024px) {
+        height: 60px;
+        width: 60px;
+        top: 25%;
+        left: 8%;
+    }
+      i{
+        color: var(--servicesafety-color2);
+        font-size: 30px;
+        position: relative;
+        left: 30%;
+        top: 30%;
+      }
+    }
+    &__title{
+      color: var(--servicesamount-color);
+      font-weight: bold;
+      font-size: 20px;
+      left: 40%;
+      top: 14%;
+      position: absolute;
+    }
+    &__amount{
+      color: var(--servicestext-color);
+      font-weight: 600;
+      position: absolute;
+      top: 40%;
+      font-size: 16px;
+      left: 39%;
+    }
+  }
+  @keyframes moveUp {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+}
+
+.bankserviceslist{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  position: absolute;
+  left: 25%;
+  top: 32%;
+
+  &__title{
+    top: -10%;
+    font-size: 24px;
+    font-weight: 600;
+    position: absolute;
+    color: #343C6A;
+    @media (max-width: 1440px) {
+      font-size: 22px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 18px;
+    top: -8%;
+  }
+  }
+  
+
+  @media (max-width: 1440px) {
+    left: 20%;
+    top: 32.5%;
+    gap: 7px;
+    width: 1110px;
+}
+@media (max-width: 1024px) {
+  left: 15%;
+  top: 32.5%;
+  gap: 7px;
+  width: 870px;
+}
+@media (max-width: 375px) {
+  display: none;
+}
+
+  .businessloans{
+    width: 1210px;
+    height: 90px;
+    border-radius: 20px;
+    background-color: #ffff;
+    @media (max-width: 1440px) {
+      height: 80px;
+  }
+  button{
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid #718EBF;
+    color: #718EBF;
+    padding: 10px;
+    width: 170px;
+    top: -1vh;
+    left: 107vh;
+    position: relative;
+    font-size: 0.9rem;
+    &:hover{
+      animation: moveUp 0.3s ease forwards;
+    }
+    @media (max-width: 1440px) {
+      left: 114vh;
+      top: -2vh;
+  }
+  @media (max-width: 1024px) {
+    left: 85vh;
+}
+  }
+    &__title{
+      ul{
+        li{
+          color: black;
+          text-decoration: none;
+          list-style: none;
+          display: inline-block;
+          padding: 7px;
+          position: relative;
+          top: -7.5vh;
+          font-weight: 500;
+          left: 0vh;
+          margin: 68px;
+          @media (max-width: 1440px) {
+            margin: 44px;
+            padding: 7.5px;
+            top: -6.5vh;
+            left: 2.8vh;
+        }
+        @media (max-width: 1024px) {
+          margin: 15px;
+          padding: 7.5px;
+          top: -3vh;
+          left: 2.8vh; 
+        }
+        }
+      }
+    }
+    
+    &__description{
+      left: -5vh;
+      position: relative;
+      ul{
+        li{
+          color: #718EBF;
+          text-decoration: none;
+          list-style: none;
+          display: inline-block;
+          padding: 10px;
+          position: relative;
+          top: -23vh;
+          font-size: 15px;
+          font-weight: 400;
+          left: 6.8vh;
+          margin: 47.5px;
+          @media (max-width: 1440px) {
+            margin: 28.5px;
+            padding: 9.5px;
+            top: -19.2vh;
+            left: 9.7vh;
+        }
+        @media (max-width: 1024px) {
+          margin: 2px;
+          padding: 4.5px;
+          top: -7.5vh;
+          left: 10vh; 
+        }
+        }
+      }
+    }
+    &__icon{
+      position: absolute;
+      left: 2%;
+      background-color: #FFE0EB;
+      top: 2%;
+      height: 60px;
+      width: 60px;
+      border-radius: 20px; 
+      i{
+        color: #FF82AC;
+        font-size: 23px;
+        position: relative;
+        left: 32%;
+        top: 32%;
+      }
+    }
+  }
+
+  .checkingaccounts{
+    width: 1210px;
+    height: 90px;
+    border-radius: 20px;
+    background-color: #ffff;
+    @media (max-width: 1440px) {
+      height: 80px;
+  }
+    button{
+      border-radius: 20px;
+      background-color: transparent;
+      border: 1px solid #718EBF;
+      color: #718EBF;
+      padding: 10px;
+      width: 170px;
+      top: -1vh;
+      left: 107vh;
+      position: relative;
+      font-size: 0.9rem;
+      &:hover{
+        animation: moveUp 0.3s ease forwards;
+      }
+      @media (max-width: 1440px) {
+        left: 114vh;
+        top: -2vh;
+    }
+    @media (max-width: 1024px) {
+      left: 85vh;
+  }
+    }
+    &__title{
+      ul{
+        li{
+          color: black;
+          text-decoration: none;
+          list-style: none;
+          display: inline-block;
+          padding: 7px;
+          position: relative;
+          top: -7.5vh;
+          font-weight: 500;
+          left: 0vh;
+          margin: 62px;
+          @media (max-width: 1440px) {
+            margin: 40px;
+            padding: 7.5px;
+            top: -6.5vh;
+            left: 2.8vh;
+        }
+        @media (max-width: 1024px) {
+          margin: 10px;
+          padding: 7.5px;
+          top: -2vh;
+          left: 3.7vh; 
+        }
+        }
+      }
+    }
+    
+    &__description{
+      left: -5vh;
+      position: relative;
+      ul{
+        li{
+          color: #718EBF;
+          text-decoration: none;
+          list-style: none;
+          display: inline-block;
+          padding: 10px;
+          position: relative;
+          top: -22vh;
+          font-size: 15px;
+          font-weight: 400;
+          left: 6.2vh;
+          margin: 47.5px;
+          @media (max-width: 1440px) {
+            margin: 28.5px;
+            padding: 9.5px;
+            top: -19.2vh;
+            left: 9.7vh;
+        }
+        @media (max-width: 1024px) {
+          margin: 2px;
+          padding: 4.5px;
+          top: -5.5vh;
+          left: 10vh; 
+        }
+        }
+      }
+    }
+    &__icon{
+      position: absolute;
+      left: 2%;
+      background-color: #FFF5D9;
+      top: 19.5%;
+      height: 60px;
+      width: 60px;
+      border-radius: 20px; 
+      i{
+        color: #FFBB38;
+        font-size: 23px;
+        position: relative;
+        left: 32%;
+        top: 32%;
+      }
+    }
+  }
+  .savingsaccounts{
+    width: 1210px;
+    height: 90px;
+    border-radius: 20px;
+    background-color: #ffff;
+    @media (max-width: 1440px) {
+      height: 80px;
+  }
+  button{
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid #718EBF;
+    color: #718EBF;
+    padding: 10px;
+    width: 170px;
+    top: -1vh;
+    left: 107vh;
+    position: relative;
+    font-size: 0.9rem;
+    &:hover{
+      animation: moveUp 0.3s ease forwards;
+    }
+    @media (max-width: 1440px) {
+      left: 114vh;
+      top: -2vh;
+  }
+  @media (max-width: 1024px) {
+    left: 85vh;
+}
+  }
+    &__title{
+      ul{
+        li{
+          color: black;
+          text-decoration: none;
+          list-style: none;
+          display: inline-block;
+          padding: 8px;
+          position: relative;
+          top: -7.5vh;
+          font-weight: 500;
+          left: 0vh;
+          margin: 62px;
+          @media (max-width: 1440px) {
+            margin: 40px;
+            padding: 7.5px;
+            top: -6.5vh;
+            left: 2.8vh;
+        }
+        @media (max-width: 1024px) {
+          margin: 10px;
+          padding: 7.5px;
+          top: -2vh;
+          left: 3.7vh; 
+        }
+        }
+      }
+    }
+    
+    &__description{
+      left: -5vh;
+      position: relative;
+      ul{
+        li{
+          color: #718EBF;
+          text-decoration: none;
+          list-style: none;
+          display: inline-block;
+          padding: 10px;
+          position: relative;
+          top: -22vh;
+          font-size: 15px;
+          font-weight: 400;
+          left: 6.2vh;
+          margin: 47.5px;
+          @media (max-width: 1440px) {
+            margin: 28.5px;
+            padding: 9.5px;
+            top: -19.2vh;
+            left: 9.7vh;
+        }
+        @media (max-width: 1024px) {
+          margin: 2px;
+          padding: 4.5px;
+          top: -5.5vh;
+          left: 10vh; 
+        }
+        }
+      }
+    }
+    &__icon{
+      position: absolute;
+      left: 2%;
+      background-color: #FFE0EB;
+      top: 36.5%;
+      height: 60px;
+      width: 60px;
+      border-radius: 20px; 
+      i{
+        color: #FF82AC;
+        font-size: 23px;
+        position: relative;
+        left: 32%;
+        top: 32%;
+      }
+    }
+  }
+  .debitandcredit{
+    width: 1210px;
+    height: 90px;
+    border-radius: 20px;
+    background-color: #ffff;
+    @media (max-width: 1440px) {
+      height: 80px;
+  }
+  button{
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid #718EBF;
+    color: #718EBF;
+    padding: 10px;
+    width: 170px;
+    top: -1vh;
+    left: 107vh;
+    position: relative;
+    font-size: 0.9rem;
+    &:hover{
+      animation: moveUp 0.3s ease forwards;
+    }
+    @media (max-width: 1440px) {
+      left: 114vh;
+      top: -2vh;
+  }
+  @media (max-width: 1024px) {
+    left: 85vh;
+}
+  }
+    &__title{
+      ul{
+        li{
+          color: black;
+          text-decoration: none;
+          list-style: none;
+          display: inline-block;
+          padding: 7px;
+          position: relative;
+          top: -6.5vh;
+          font-weight: 500;
+          left: 1.2vh;
+          margin: 55px;
+          @media (max-width: 1440px) {
+            margin: 35px;
+            padding: 7.5px;
+            top: -6.5vh;
+            left: 4vh;
+        }
+        @media (max-width: 1024px) {
+          margin: 5px;
+          padding: 7.5px;
+          top: -1vh;
+          left: 4.1vh; 
+        }
+        }
+      }
+    }
+    
+    &__description{
+      left: -5vh;
+      position: relative;
+      ul{
+        li{
+          color: #718EBF;
+          text-decoration: none;
+          list-style: none;
+          display: inline-block;
+          padding: 10px;
+          position: relative;
+          top: -20vh;
+          font-size: 15px;
+          font-weight: 400;
+          left: 6.8vh;
+          margin: 47.5px;
+          @media (max-width: 1440px) {
+            margin: 28.5px;
+            padding: 9.5px;
+            top: -17.2vh;
+            left: 9.7vh;
+        }
+        @media (max-width: 1024px) {
+          margin: 2px;
+          padding: 4.5px;
+          top: -4.5vh;
+          left: 10vh; 
+        }
+        }
+      }
+    }
+    &__icon{
+      position: absolute;
+      left: 2%;
+      background-color: #E7EDFF;
+      top: 53.5%;
+      height: 60px;
+      width: 60px;
+      border-radius: 20px; 
+      i{
+        color: #396AFF;
+        font-size: 23px;
+        position: relative;
+        left: 32%;
+        top: 32%;
+      }
+    }
+  }
+  .banklifeinsurance{
+    width: 1210px;
+    height: 90px;
+    border-radius: 20px;
+    background-color: #ffff;
+    @media (max-width: 1440px) {
+      height: 80px;
+  }
+  button{
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid #718EBF;
+    color: #718EBF;
+    padding: 10px;
+    width: 170px;
+    top: -1vh;
+    left: 107vh;
+    position: relative;
+    font-size: 0.9rem;
+    &:hover{
+      animation: moveUp 0.3s ease forwards;
+    }
+    @media (max-width: 1440px) {
+      left: 114vh;
+      top: -2vh;
+  }
+  @media (max-width: 1024px) {
+    left: 85vh;
+}
+  }
+    &__title{
+      ul{
+        li{
+          color: black;
+          text-decoration: none;
+          list-style: none;
+          display: inline-block;
+          padding: 7px;
+          position: relative;
+          top: -7.5vh;
+          font-weight: 500;
+          left: 0vh;
+          margin: 68px;
+          @media (max-width: 1440px) {
+            margin: 47px;
+            padding: 7.5px;
+            top: -6.5vh;
+            left: 2.8vh;
+        }
+        @media (max-width: 1024px) {
+          margin: 15px;
+          padding: 7.5px;
+          top: -3vh;
+          left: 2.8vh; 
+        }
+        }
+      }
+    }
+    
+    &__description{
+      left: -5vh;
+      position: relative;
+      ul{
+        li{
+          color: #718EBF;
+          text-decoration: none;
+          list-style: none;
+          display: inline-block;
+          padding: 10px;
+          position: relative;
+          top: -23vh;
+          font-size: 15px;
+          font-weight: 400;
+          left: 6.8vh;
+          margin: 47.5px;
+          @media (max-width: 1440px) {
+            margin: 28.5px;
+            padding: 9.5px;
+            top: -19.2vh;
+            left: 9.7vh;
+        }
+        @media (max-width: 1024px) {
+          margin: 2px;
+          padding: 4.5px;
+          top: -7.5vh;
+          left: 10vh; 
+        }
+        }
+      }
+    }
+    &__icon{
+      position: absolute;
+      left: 2%;
+      background-color: #DCFAF8;
+      top: 70.5%;
+      height: 60px;
+      width: 60px;
+      border-radius: 20px; 
+      i{
+        color: #16DBCC;
+        font-size: 23px;
+        position: relative;
+        left: 32%;
+        top: 32%;
+      }
+    }
+  }
+  .businessloans2{
+    width: 1210px;
+    height: 90px;
+    border-radius: 20px;
+    background-color: #ffff;
+    @media (max-width: 1440px) {
+      height: 80px;
+  }
+  button{
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid #718EBF;
+    color: #718EBF;
+    padding: 10px;
+    width: 170px;
+    top: -1vh;
+    left: 107vh;
+    position: relative;
+    font-size: 0.9rem;
+    &:hover{
+      animation: moveUp 0.3s ease forwards;
+    }
+    @media (max-width: 1440px) {
+      left: 114vh;
+      top: -2vh;
+  }
+  @media (max-width: 1024px) {
+    left: 85vh;
+}
+  }
+    &__title{
+      ul{
+        li{
+          color: black;
+          text-decoration: none;
+          list-style: none;
+          display: inline-block;
+          padding: 7px;
+          position: relative;
+          top: -7.5vh;
+          font-weight: 500;
+          left: 0vh;
+          margin: 68px;
+          @media (max-width: 1440px) {
+            margin: 47px;
+            padding: 7.5px;
+            top: -6.5vh;
+            left: 2.8vh;
+        }
+        @media (max-width: 1024px) {
+          margin: 15px;
+          padding: 7.5px;
+          top: -3vh;
+          left: 2.8vh; 
+        }
+        }
+      }
+    }
+    
+    &__description{
+      left: -5vh;
+      position: relative;
+      ul{
+        li{
+          color: #718EBF;
+          text-decoration: none;
+          list-style: none;
+          display: inline-block;
+          padding: 10px;
+          position: relative;
+          top: -23vh;
+          font-size: 15px;
+          font-weight: 400;
+          left: 6.8vh;
+          margin: 47.5px;
+          @media (max-width: 1440px) {
+            margin: 28.5px;
+            padding: 9.5px;
+            top: -19.2vh;
+            left: 9.7vh;
+        }
+        @media (max-width: 1024px) {
+          margin: 2px;
+          padding: 4.5px;
+          top: -7.5vh;
+          left: 10vh; 
+        }
+        }
+      }
+    }
+    &__icon{
+      position: absolute;
+      left: 2%;
+      background-color: #FFE0EB;
+      top: 87.5%;
+      height: 60px;
+      width: 60px;
+      border-radius: 20px; 
+      i{
+        color: #FF82AC;
+        font-size: 23px;
+        position: relative;
+        left: 32%;
+        top: 32%;
+      }
+    }
+  }
+  
+}
+
+.bankserviceslistmobile{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  position: absolute;
+  left: 25%;
+  top: 7%;
+display: none;
+@media (max-width: 375px) {
+  display: block;
+  top: 41%;
+  left: 0.5%;
+}
+&__title{
+  top: -6%;
+  left: 3%;
+  font-size: 17px;
+  font-weight: 600;
+  position: absolute;
+  color: #343C6A;
+  }
+
+  .businessloansmobile{
+    width: 375px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: #ffff;
+    button{
+      position: relative;
+      left: 31.5vh;
+      top: -1vh;
+      color: #1814F3;
+      font-weight: bold;
+      border: none;
+      background-color: transparent;
+      width: 120px;
+      font-size: 1.05rem;
+      &:hover{
+        animation: moveUp 0.3s ease forwards;
+      }
+    
+    }
+    &__title{
+      font-size: 12px;
+      font-weight: normal;
+      position: relative;
+      left: 17.8%;
+      top: 1.5vh;
+      color: var(--black-color);
+    }
+    
+    &__description{
+      left: 9vh;
+      top: 0vh;
+      font-size: 15px;
+      color: #718EBF;
+      position: relative;
+    }
+    &__icon{
+      position: absolute;
+      left: 3%;
+      top: 5.5%;
+      background-color: #FFE0EB;
+      height: 45px;
+      width: 45px;
+      border-radius: 12px; 
+      i{
+        color: #FF82AC;
+        font-size: 20px;
+        position: relative;
+        left: 32%;
+        top: 32%;
+      }
+    }
+  }
+
+  .checkingaccountsmobile{
+    width: 375px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: #ffff;
+    button{
+      position: relative;
+      left: 31.5vh;
+      top: -1vh;
+      color: #1814F3;
+      font-weight: bold;
+      border: none;
+      background-color: transparent;
+      width: 120px;
+      font-size: 1.05rem;
+      &:hover{
+        animation: moveUp 0.3s ease forwards;
+      }
+    }
+    &__title{
+      font-size: 12px;
+      font-weight: normal;
+      position: relative;
+      left: 17.8%;
+      top: 1.5vh;
+      color: var(--black-color);
+    }
+    
+    &__description{
+      left: 9vh;
+      top: 0vh;
+      font-size: 15px;
+      color: #718EBF;
+      position: relative;
+    }
+    &__icon{
+      position: absolute;
+      left: 3%;
+      background-color: #FFF5D9;
+      top: 22.5%;
+      height: 45px;
+      width: 45px;
+      border-radius: 12px; 
+      i{
+        color: #FFBB38;
+        font-size: 23px;
+        position: relative;
+        left: 32%;
+        top: 32%;
+      }
+    }
+  }
+  .savingsaccountsmobile{
+    width: 375px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: #ffff;
+    button{
+      position: relative;
+      left: 31.5vh;
+      top: -1vh;
+      color: #1814F3;
+      font-weight: bold;
+      border: none;
+      background-color: transparent;
+      width: 120px;
+      font-size: 1.05rem;
+      &:hover{
+        animation: moveUp 0.3s ease forwards;
+      }
+    }
+    &__title{
+      font-size: 12px;
+      font-weight: normal;
+      position: relative;
+      left: 17.8%;
+      top: 1.5vh;
+      color: var(--black-color);
+    }
+    
+    &__description{
+      left: 9vh;
+      top: 0vh;
+      font-size: 15px;
+      color: #718EBF;
+      position: relative;
+    }
+    &__icon{
+      position: absolute;
+      left: 3%;
+      background-color: #FFE0EB;
+      top: 39.5%;
+      height: 45px;
+      width: 45px;
+      border-radius: 12px; 
+      i{
+        color: #FF82AC;
+        font-size: 20px;
+        position: relative;
+        left: 32%;
+        top: 32%;
+      }
+    }
+  }
+  .debitandcreditmobile{
+    width: 375px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: #ffff;
+    button{
+      position: relative;
+      left: 31.5vh;
+      top: -1vh;
+      color: #1814F3;
+      font-weight: bold;
+      border: none;
+      background-color: transparent;
+      width: 120px;
+      font-size: 1.05rem;
+      &:hover{
+        animation: moveUp 0.3s ease forwards;
+      }
+    }
+    &__title{
+      font-size: 12px;
+      font-weight: normal;
+      position: relative;
+      left: 17.8%;
+      top: 1.5vh;
+      color: var(--black-color);
+    }
+    
+    &__description{
+      left: 9vh;
+      top: 0vh;
+      font-size: 15px;
+      color: #718EBF;
+      position: relative;
+    }
+    &__icon{
+      position: absolute;
+      left: 3%;
+      background-color: #E7EDFF;
+      top: 56%;
+      height: 45px;
+      width: 45px;
+      border-radius: 12px; 
+      i{
+        color: #396AFF;
+        font-size: 20px;
+        position: relative;
+        left: 32%;
+        top: 32%;
+      }
+    }
+  }
+  .banklifeinsurancemobile{
+    width: 375px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: #ffff;
+    button{
+      position: relative;
+      left: 31.5vh;
+      top: 0vh;
+      color: #1814F3;
+      font-weight: bold;
+      border: none;
+      background-color: transparent;
+      width: 120px;
+      font-size: 1.05rem;
+      &:hover{
+        animation: moveUp 0.3s ease forwards;
+      }
+    }
+    &__title{
+      font-size: 12px;
+      font-weight: normal;
+      position: relative;
+      left: 17.8%;
+      top: 1.5vh;
+      color: var(--black-color);
+    }
+    
+    &__description{
+      left: 9vh;
+      top: 0vh;
+      font-size: 15px;
+      color: #718EBF;
+      position: relative;
+    }
+    &__icon{
+      position: absolute;
+      left: 3%;
+      background-color: #DCFAF8;
+      top: 71.5%;
+      height: 45px;
+      width: 45px;
+      border-radius: 12px; 
+      i{
+        color: #16DBCC;
+        font-size: 20px;
+        position: relative;
+        left: 32%;
+        top: 32%;
+      }
+    }
+  }
+  .businessloans2mobile{
+    width: 375px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: #ffff;
+    button{
+      position: relative;
+      left: 31.5vh;
+      top: -1vh;
+      color: #1814F3;
+      font-weight: bold;
+      border: none;
+      background-color: transparent;
+      width: 120px;
+      font-size: 1.05rem;
+      &:hover{
+        animation: moveUp 0.3s ease forwards;
+      }
+    }
+    &__title{
+      font-size: 12px;
+      font-weight: normal;
+      position: relative;
+      left: 17.8%;
+      top: 1.5vh;
+      color: var(--black-color);
+    }
+    
+    &__description{
+      left: 9vh;
+      top: 0vh;
+      font-size: 15px;
+      color: #718EBF;
+      position: relative;
+    }
+    &__icon{
+      position: absolute;
+      left: 1.5vh;
+      background-color: #FFE0EB;
+      top: 88.5%;
+      height: 45px;
+      width: 45px;
+      border-radius: 12px; 
+      i{
+        color: #FF82AC;
+        font-size: 20px;
+        position: relative;
+        left: 32%;
+        top: 32%;
+      }
+    }
+  }
+  
+}
